@@ -3,7 +3,6 @@
 
 #import <Foundation/Foundation.h>
 
-#import "ANHAsync.h"
 #import "ANHApplication.h"
 #import "ANHNotificationHubAppDelegateForwarder.h"
 #import "MSNotificationHub.h"
@@ -119,7 +118,7 @@ static ANHNotificationHubAppDelegateForwarder *sharedInstance = nil;
 
 - (void)custom_application:(UIApplication *)application
     didReceiveRemoteNotification:(NSDictionary *)userInfo
-          fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler ANH_SWIFT_DISABLE_ASYNC {
+          fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler NS_SWIFT_DISABLE_ASYNC {
     IMP originalImp = NULL;
 
     // Forward to the original delegate.

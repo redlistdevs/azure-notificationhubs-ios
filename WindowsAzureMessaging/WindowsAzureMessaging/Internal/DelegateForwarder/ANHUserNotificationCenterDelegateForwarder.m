@@ -4,7 +4,6 @@
 #import <Foundation/Foundation.h>
 #import <UserNotifications/UserNotifications.h>
 
-#import "ANHAsync.h"
 #import "ANHUserNotificationCenterDelegateForwarder.h"
 #import "MSNotificationHub.h"
 
@@ -78,7 +77,7 @@ static ANHUserNotificationCenterDelegateForwarder *sharedInstance = nil;
 - (void)custom_userNotificationCenter:(UNUserNotificationCenter *)center
               willPresentNotification:(UNNotification *)notification
                 withCompletionHandler:(void (^)(UNNotificationPresentationOptions options))completionHandler
-    API_AVAILABLE(ios(10.0), watchos(3.0), macos(10.14), macCatalyst(13.0)) API_UNAVAILABLE(tvos) ANH_SWIFT_DISABLE_ASYNC {
+    API_AVAILABLE(ios(10.0), watchos(3.0), macos(10.14), macCatalyst(13.0)) API_UNAVAILABLE(tvos) NS_SWIFT_DISABLE_ASYNC {
     IMP originalImp = NULL;
 
     /*
@@ -103,7 +102,7 @@ static ANHUserNotificationCenterDelegateForwarder *sharedInstance = nil;
 - (void)custom_userNotificationCenter:(UNUserNotificationCenter *)center
        didReceiveNotificationResponse:(UNNotificationResponse *)response
                 withCompletionHandler:(void (^)(void))completionHandler
-    API_AVAILABLE(ios(10.0), watchos(3.0), macos(10.14), macCatalyst(13.0))API_UNAVAILABLE(tvos) ANH_SWIFT_DISABLE_ASYNC {
+    API_AVAILABLE(ios(10.0), watchos(3.0), macos(10.14), macCatalyst(13.0))API_UNAVAILABLE(tvos) NS_SWIFT_DISABLE_ASYNC {
     IMP originalImp = NULL;
 
     /*

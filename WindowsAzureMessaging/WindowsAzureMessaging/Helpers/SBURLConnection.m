@@ -2,7 +2,6 @@
 //  Copyright (c) Microsoft Corporation. All rights reserved.
 //----------------------------------------------------------------
 
-#import "ANHAsync.h"
 #import "SBURLConnection.h"
 #import "SBNotificationHubHelper.h"
 
@@ -17,7 +16,7 @@ static StaticHandleBlock _staticHandler;
 #pragma GCC diagnostic push
 #pragma GCC diagnostic ignored "-Wdeprecated-declarations"
 #pragma GCC diagnostic ignored "-Wnullable-to-nonnull-conversion"
-- (void)sendRequest:(NSURLRequest *)request completion:(void (^)(NSHTTPURLResponse *, NSData *, NSError *))completion ANH_SWIFT_DISABLE_ASYNC
+- (void)sendRequest:(NSURLRequest *)request completion:(void (^)(NSHTTPURLResponse *, NSData *, NSError *))completion NS_SWIFT_DISABLE_ASYNC
 {
     if (self) {
         self->_request = request;
