@@ -26,7 +26,16 @@ let package = Package(
             cSettings: [
                 .define("NH_C_VERSION", to:"\"3.1.5\""),
                 .define("NH_C_BUILD", to:"\"1\""),
-                .headerSearchPath("**"),
+                .headerSearchPath("."),
+                .headerSearchPath("Helpers"),
+                .headerSearchPath("HttpClient"),
+                .headerSearchPath("HttpClient/Util"),
+                .headerSearchPath("Internal"),
+                .headerSearchPath("Internal/DelegateForwarder"),
+                .headerSearchPath("Model"),
+                .headerSearchPath("Model/Internal"),
+                .headerSearchPath("Util"),
+                .headerSearchPath("Vendor/Reachability"),
             ],
             linkerSettings: [
                 .linkedFramework("Foundation"),
