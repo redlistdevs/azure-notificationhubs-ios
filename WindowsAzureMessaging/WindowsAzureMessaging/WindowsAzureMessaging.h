@@ -8,6 +8,7 @@
 #if !TARGET_OS_OSX
 #import "SBConnectionString.h"
 #import "SBNotificationHub.h"
+#import "SBRegistration.h"
 #endif
 
 // New API

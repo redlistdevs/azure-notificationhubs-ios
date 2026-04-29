@@ -91,6 +91,9 @@ src/WindowsAzureMessaging/BVT/IosSdkTests/Default.png
 src/WindowsAzureMessaging/BVT/IosSdkTests/Default-568h@2x.png
 src/WindowsAzureMessaging/BVT/IosSdkTests/Default@2x.png
 
+# Claude Code
+.claude/
+
 # macOS specific below
 .DS_Store
 .AppleDouble
